@@ -5,17 +5,17 @@
 // Take a look at conf.php.example file for an example of conf.php file
 // and explanations for all possibles parameters.
 //
-$dolibarr_main_url_root='http://192.168.1.14/breterp/htdocs ';
-$dolibarr_main_document_root='/var/services/web/breterp/htdocs';
+$dolibarr_main_url_root='http://localhost/breterp/htdocs';
+$dolibarr_main_document_root='C:/dolibarr/www/breterp/htdocs';
 $dolibarr_main_url_root_alt='/custom';
-$dolibarr_main_document_root_alt='/var/services/web/breterp/htdocs/custom';
-$dolibarr_main_data_root='/var/services/web/breterp/documents';
+$dolibarr_main_document_root_alt='C:/dolibarr/www/breterp/htdocs/custom';
+$dolibarr_main_data_root='C:/dolibarr/www/breterp/documents';
 $dolibarr_main_db_host='localhost';
 $dolibarr_main_db_port='3306';
 $dolibarr_main_db_name='dolibarr';
 $dolibarr_main_db_prefix='llx_';
-$dolibarr_main_db_user='admin';
-$dolibarr_main_db_pass='';
+$dolibarr_main_db_user='dolibarrmysql';
+$dolibarr_main_db_pass='changeme';
 $dolibarr_main_db_type='mysqli';
 $dolibarr_main_db_character_set='utf8';
 $dolibarr_main_db_collation='utf8_unicode_ci';
