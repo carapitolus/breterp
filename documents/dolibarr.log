@@ -1,0 +1,86 @@
+2018-02-05 10:14:44 DEBUG   192.168.1.26    step1: create database: dolibarr utf8 utf8_unicode_ci admin
+2018-02-05 10:14:44 DEBUG   192.168.1.26    DoliDBMysqli::connect host=localhost, port=3306, login=admin, passwd=--hidden--, name=
+2018-02-05 10:14:44 DEBUG   192.168.1.26    CREATE DATABASE `dolibarr` DEFAULT CHARACTER SET `utf8` DEFAULT COLLATE `utf8_unicode_ci`
+2018-02-05 10:14:44 DEBUG   192.168.1.26    sql=CREATE DATABASE `dolibarr` DEFAULT CHARACTER SET `utf8` DEFAULT COLLATE `utf8_unicode_ci`
+2018-02-05 10:14:44 ERR     192.168.1.26    DoliDBMysqli::query SQL Error message: DB_ERROR_ACCESSDENIED Access denied for user ''@'localhost' to database 'dolibarr'
+2018-02-05 10:14:44 DEBUG   192.168.1.26    CREATE DATABASE `dolibarr`
+2018-02-05 10:14:44 DEBUG   192.168.1.26    sql=CREATE DATABASE `dolibarr`
+2018-02-05 10:14:44 ERR     192.168.1.26    DoliDBMysqli::query SQL Error message: DB_ERROR_ACCESSDENIED Access denied for user ''@'localhost' to database 'dolibarr'
+2018-02-05 10:14:44 ERR     192.168.1.26    step1: failed to create database dolibarr DB_ERROR_ACCESSDENIED Access denied for user ''@'localhost' to database 'dolibarr'
+2018-02-05 10:14:44 DEBUG   192.168.1.26    --- step1: end
+2018-02-05 10:14:57 DEBUG   192.168.1.26    step1: create database user: admin
+2018-02-05 10:14:57 DEBUG   192.168.1.26    DoliDBMysqli::connect host=localhost, port=3306, login=admin, passwd=--hidden--, name=
+2018-02-05 10:14:57 DEBUG   192.168.1.26    DoliDBMysqli::select_db database=mysql
+2018-02-05 10:14:57 ERR     192.168.1.26    DoliDBMysqli::DoliDBMysqli : Select_db error Access denied for user ''@'localhost' to database 'mysql'
+2018-02-05 10:14:57 DEBUG   192.168.1.26    --- step1: end
+2018-02-05 10:16:28 DEBUG   192.168.1.26    step1: create database user: admin
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::connect host=localhost, port=3306, login=root, passwd=--hidden--, name=
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::select_db database=mysql
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::DDLCreateUser
+2018-02-05 10:16:28 DEBUG   192.168.1.26    sql=CREATE USER 'admin'
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::DDLCreateUser
+2018-02-05 10:16:28 DEBUG   192.168.1.26    sql=GRANT ALL PRIVILEGES ON dolibarr.* TO 'admin'@'localhost' IDENTIFIED BY ''
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::DDLCreateUser
+2018-02-05 10:16:28 DEBUG   192.168.1.26    sql=FLUSH Privileges
+2018-02-05 10:16:28 DEBUG   192.168.1.26    step1: create database: dolibarr utf8 utf8_unicode_ci admin
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::connect host=localhost, port=3306, login=root, passwd=--hidden--, name=
+2018-02-05 10:16:28 DEBUG   192.168.1.26    CREATE DATABASE `dolibarr` DEFAULT CHARACTER SET `utf8` DEFAULT COLLATE `utf8_unicode_ci`
+2018-02-05 10:16:28 DEBUG   192.168.1.26    sql=CREATE DATABASE `dolibarr` DEFAULT CHARACTER SET `utf8` DEFAULT COLLATE `utf8_unicode_ci`
+2018-02-05 10:16:28 DEBUG   192.168.1.26    sql=SHOW VARIABLES LIKE 'character_set_database'
+2018-02-05 10:16:28 DEBUG   192.168.1.26    sql=SHOW VARIABLES LIKE 'collation_database'
+2018-02-05 10:16:28 DEBUG   192.168.1.26    step1: note that default server was charset=utf8 collation=utf8_general_ci
+2018-02-05 10:16:28 DEBUG   192.168.1.26    step1: connection type=mysqli on host=localhost port=3306 user=admin name=dolibarr
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::connect host=localhost, port=3306, login=admin, passwd=--hidden--, name=
+2018-02-05 10:16:28 DEBUG   192.168.1.26    DoliDBMysqli::select_db database=dolibarr
+2018-02-05 10:16:28 DEBUG   192.168.1.26    step1: connection to server by user admin ok
+2018-02-05 10:16:28 DEBUG   192.168.1.26    step1: connection to database dolibarr by user admin ok
+2018-02-05 10:16:28 DEBUG   192.168.1.26    --- step1: end
+2018-02-05 10:27:27 DEBUG   192.168.1.26    sql=SELECT u.rowid, u.pass, u.pass_crypted FROM llx_user as u
+2018-02-05 10:27:27 DEBUG   192.168.1.26    BEGIN Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26     admin.lib::dolibarr_set_const
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=DELETE FROM llx_const WHERE name = 'DATABASE_PWD_ENCRYPTED' AND entity = 1
+2018-02-05 10:27:27 DEBUG   192.168.1.26     admin.lib::dolibarr_set_const
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=INSERT INTO llx_const(name,value,type,visible,note,entity) VALUES ('DATABASE_PWD_ENCRYPTED', '1','chaine',0,'',1)
+2018-02-05 10:27:27 DEBUG   192.168.1.26    COMMIT Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26    BEGIN Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26     admin.lib::dolibarr_set_const
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=DELETE FROM llx_const WHERE name = 'MAIN_SECURITY_SALT' AND entity = 0
+2018-02-05 10:27:27 DEBUG   192.168.1.26     admin.lib::dolibarr_set_const
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=INSERT INTO llx_const(name,value,type,visible,note,entity) VALUES ('MAIN_SECURITY_SALT', '20180205102727','chaine',0,'',0)
+2018-02-05 10:27:27 DEBUG   192.168.1.26    COMMIT Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26    BEGIN Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26     admin.lib::dolibarr_set_const
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=DELETE FROM llx_const WHERE name = 'MAIN_SECURITY_HASH_ALGO' AND entity = 0
+2018-02-05 10:27:27 DEBUG   192.168.1.26     admin.lib::dolibarr_set_const
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=INSERT INTO llx_const(name,value,type,visible,note,entity) VALUES ('MAIN_SECURITY_HASH_ALGO', 'sha1md5','chaine',0,'',0)
+2018-02-05 10:27:27 DEBUG   192.168.1.26    COMMIT Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26    User::create login=admin, user=0
+2018-02-05 10:27:27 DEBUG   192.168.1.26    BEGIN Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26     User::create
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=SELECT login FROM llx_user WHERE login ='admin' AND entity IN (0,1)
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=INSERT INTO llx_user (datec,login,ldap_sid,entity) VALUES('20180205102727','admin','',0)
+2018-02-05 10:27:27 DEBUG   192.168.1.26     User::create
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=SELECT id FROM llx_rights_def WHERE bydefault = 1 AND entity = 1
+2018-02-05 10:27:27 INFO    192.168.1.26     User::update notrigger=1, nosyncmember=1, nosyncmemberpass=0
+2018-02-05 10:27:27 DEBUG   192.168.1.26      User::update
+2018-02-05 10:27:27 DEBUG   192.168.1.26      sql=UPDATE llx_user SET lastname = 'SuperAdmin', firstname = '', employee = 1, login = 'admin', api_key = null, gender = '', admin = 1, address = '', zip = '', town = '', fk_state = null, fk_country = null, office_phone = '', office_fax = '', user_mobile = '', email = '', skype = '', job = '', signature = '', accountancy_code = '', color = '', dateemployment=null, note = '', photo = null, openid = null, fk_user = null, weeklyhours= null, entity = '0' WHERE rowid = 1
+2018-02-05 10:27:27 DEBUG   192.168.1.26      User::setPassword user=0 password=************ changelater=0 notrigger=1 nosyncmember=0
+2018-02-05 10:27:27 DEBUG   192.168.1.26       User::setPassword
+2018-02-05 10:27:27 DEBUG   192.168.1.26       sql=UPDATE llx_user SET pass_crypted = 'c6d83bc2f3302c1d6ab3a9ca92f9ee5ff05e13d0', pass_temp = null, pass = null WHERE rowid = 1
+2018-02-05 10:27:27 DEBUG   192.168.1.26       User::setPassword notrigger=1 error=0
+2018-02-05 10:27:27 DEBUG   192.168.1.26      User::update set link with member
+2018-02-05 10:27:27 DEBUG   192.168.1.26      sql=UPDATE llx_user SET fk_member =null where rowid = 1
+2018-02-05 10:27:27 DEBUG   192.168.1.26    COMMIT Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26    BEGIN Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26     step5: set MAIN_VERSION_FIRST_INSTALL const to 6.0.5
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=INSERT INTO llx_const(name,value,type,visible,note,entity) values('MAIN_VERSION_FIRST_INSTALL','6.0.5','chaine',0,'Dolibarr version when first install',0)
+2018-02-05 10:27:27 DEBUG   192.168.1.26    COMMIT Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26    BEGIN Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26     step5: set MAIN_VERSION_LAST_INSTALL const to 6.0.5
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=DELETE FROM llx_const WHERE name='MAIN_VERSION_LAST_INSTALL'
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=INSERT INTO llx_const(name,value,type,visible,note,entity) values('MAIN_VERSION_LAST_INSTALL','6.0.5','chaine',0,'Dolibarr version when last install',0)
+2018-02-05 10:27:27 DEBUG   192.168.1.26     step5: remove MAIN_NOT_INSTALLED const
+2018-02-05 10:27:27 DEBUG   192.168.1.26     sql=DELETE FROM llx_const WHERE name='MAIN_NOT_INSTALLED'
+2018-02-05 10:27:27 DEBUG   192.168.1.26    COMMIT Transaction
+2018-02-05 10:27:27 DEBUG   192.168.1.26    sql=INSERT INTO llx_const(name,value,type,visible,note,entity) VALUES ('MAIN_LANG_DEFAULT','fr_FR','chaine',0,'Default language',1)
+2018-02-05 10:27:27 DEBUG   192.168.1.26    --- step5: Dolibarr setup finished
